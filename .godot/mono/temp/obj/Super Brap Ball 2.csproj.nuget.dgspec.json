@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/noah/documents/games/super-brap-ball-2/Super Brap Ball 2.csproj": {}
+    "C:\\Users\\conta\\OneDrive\\Documents\\super-brap-ball-2\\Super Brap Ball 2.csproj": {}
   },
   "projects": {
-    "/home/noah/documents/games/super-brap-ball-2/Super Brap Ball 2.csproj": {
+    "C:\\Users\\conta\\OneDrive\\Documents\\super-brap-ball-2\\Super Brap Ball 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/noah/documents/games/super-brap-ball-2/Super Brap Ball 2.csproj",
+        "projectUniqueName": "C:\\Users\\conta\\OneDrive\\Documents\\super-brap-ball-2\\Super Brap Ball 2.csproj",
         "projectName": "Super Brap Ball 2",
-        "projectPath": "/home/noah/documents/games/super-brap-ball-2/Super Brap Ball 2.csproj",
-        "packagesPath": "/home/noah/.nuget/packages/",
-        "outputPath": "/home/noah/documents/games/super-brap-ball-2/.godot/mono/temp/obj/",
+        "projectPath": "C:\\Users\\conta\\OneDrive\\Documents\\super-brap-ball-2\\Super Brap Ball 2.csproj",
+        "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\conta\\OneDrive\\Documents\\super-brap-ball-2\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/noah/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -32,7 +32,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net6.0": {
@@ -40,15 +46,15 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.3.0, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.3.0, )"
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -65,11 +71,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.14, 6.0.14]"
+              "version": "[6.0.36, 6.0.36]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.14, 6.0.14]"
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
             }
           ],
           "frameworkReferences": {
@@ -77,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/dotnet-sdk-bin-7.0/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

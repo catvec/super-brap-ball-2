@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Super Brap Ball 2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cd9c461305b73c5cfb643c9c2c3093337ce72a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Super Brap Ball 2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Super Brap Ball 2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
