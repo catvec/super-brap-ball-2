@@ -13,6 +13,8 @@ public partial class PlayerCollision : CharacterBody3D
 
     private PrintEvery printer;
 
+    private Vector3 GRAVITY = new Vector3(0, -9.8f, 0);
+
     public override void _Ready()
     {
         this.ball = GetNode<Ball>("ball");
@@ -40,40 +42,42 @@ public partial class PlayerCollision : CharacterBody3D
         var vPrev = Velocity;
         var accel = new Vector3();
 
-        // ... Gravity
-        accel += new Vector3(0, -9.8f, 0);
-
         // ... Contact based movement
         var lastColl = GetLastSlideCollision();
         
         if (lastColl != null && lastColl.GetCollisionCount() > 0) {
             // When contacting
-            if (!this.ball.isOpen) {
-                // Rolling
+            if (this.ball.isOpen) {
+                // When open: face planted on something
+                // Don't move
+                printer.Print("Colliding + Open = Face Planted");
+            } else {
+                // When closed: Rolling
+                // Account for user input
+                accel += currentInput * new Vector3(1, 1, 4);
 
-                var impulseAccel = Vector3.Zero;
-                impulseAccel.Z = forwardStrength * 4;
-                impulseAccel.X = leftStrength;
-
-                accel += impulseAccel;
+                // Roll up and down slopes + gravity
+                var rollDirection = (lastColl.GetNormal().Normalized() + GRAVITY.Normalized()).Normalized();
+                accel += GRAVITY * rollDirection;
+                printer.Print("Colliding + Closed = Rolling");
             }
         } else {
-            // Not contacting
+            // When not contacting
             floorCollisionNormal = null;
 
             if (this.ball.isOpen) {
-                // Flying
-
+                // When open: Flying
+                printer.Print("Not Colliding + Open = Flying");
             } else {
-                // In free fall mode  
+                // When closed: In free fall mode
+                accel += GRAVITY;
+
+                printer.Print("Not Colliding + Closed = Free Falling");
             }
-
-
         }
 
         // Update new velocity
-        var vNext = vPrev + (accel * (float)delta);
-        Velocity = vNext;
+        Velocity = vPrev + (accel * (float)delta);
 
         MoveAndSlide();
 
